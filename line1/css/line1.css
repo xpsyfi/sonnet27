@@ -25,11 +25,11 @@ a {
     text-decoration: none;
     color: inherit;
     cursor:pointer;
-    transition: transform 5s ease;
+    transition: transform 8s ease;
 }
 
 a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     animation-name: flicker;
     animation-duration: 8s;
     animation-timing-function: ease-in-out;
@@ -49,14 +49,14 @@ a:hover {
 
 
 #wavy {
-    display: inline-block;
-    transition: transform 5s ease-in-out;
+    
 
 
 }
 
 #wavy:hover {
-    animation: skew 4s ease-in-out infinite;
+    display: inline-block;
+    animation: skew 6s ease-in-out infinite;
 }
 
 
@@ -91,19 +91,17 @@ a:hover {
 
 @keyframes skew {
     0% {
-        transition: skew(0deg);
-    }
-    25% {
-        transform: skew(-20deg);
-    }
-    50% {
         transform: skew(0deg);
     }
-    75% {
+    40% {transform: skew(-10deg);
+    }
+    60% {
         transform: skew(10deg);
+    }
+    80% {
+        transform: skew(-10deg);
     }
     100% {
         transform: skew(0deg);
     }
-
 }

@@ -25,9 +25,79 @@ a {
     text-decoration: none;
     color: inherit;
     cursor:pointer;
-    transition: transform 0.5s ease;
+    transition: transform 8s ease;
 }
 
 a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    animation-name: flicker;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+
+}
+
+#wonky {
+    animation-name: wonky;                
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#limbs {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#limbs span {
+    display: inline-block;
+    transition: opacity 1s ease;
+    transition: all 1s ease;
+}
+
+#limbs:hover span {
+    animation: fall 3s forwards, fadeOut 3s forwards;
+}
+
+#limbs span:not(:hover) {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes wonky {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px) rotate(5deg);
+    }
+   
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
