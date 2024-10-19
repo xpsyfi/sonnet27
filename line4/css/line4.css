@@ -25,9 +25,101 @@ a {
     text-decoration: none;
     color: inherit;
     cursor:pointer;
-    transition: transform 0.5s ease;
+    transition: transform 8s ease;
 }
 
 a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+#wonky {
+    animation-name: wonky;                
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#expire:hover {
+
+    animation: expire 2s forwards;
+}
+
+#expire:hover span {
+    animation: fall 6s forwards, fadeOut 3s forwards;
+}
+
+#expire span {
+    display: inline-block;
+    transition: transform 3s ease, opacity 3s ease;
+}
+
+#expire span:nth-child(1) {
+    animation-delay: 0s;
+}
+#expire span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+#expire span:nth-child(3) {
+    animation-delay: 0.7s;
+}
+#expire span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+#expire span:nth-child(5) {
+    animation-delay: 1s;
+}
+#expire span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+#expire span:nth-child(7) {
+    animation-delay: .5s;
+}
+#expire span:nth-child(8) {
+    animation-delay: 0s;
+}
+#expire span:nth-child(9) {
+    animation-delay: 0.3s;
+}
+
+@keyframes wonky {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px) rotate(5deg);
+    }
+   
+}
+
+@keyframes expire {
+    0% {
+        color: antiquewhite;
+    }
+    50% {
+        color: #2f6b54;
+    }
+    100% {
+        color: rgb(55, 31, 8)
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 2;
+    }
+    100% {
+        opacity: 0;
+    }
 }

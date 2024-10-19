@@ -47,17 +47,28 @@ a:hover {
 
 }
 
-
 #wavy {
-    
-
-
-}
-
-#wavy:hover {
     display: inline-block;
-    animation: skew 6s ease-in-out infinite;
 }
+
+.word {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.word span {
+    display: inline-block;
+    transition: transform 1s ease-in-out;
+}
+
+.word:hover span:nth-child(odd) {
+    animation: skewLeft 5s ease-in-out forwards;
+}
+
+.word:hover span:nth-child(even) {
+    animation: skewRight 5s ease-in-out forwards;
+}
+
 
 
 @keyframes wonky {
@@ -88,20 +99,65 @@ a:hover {
     }
 }
 
+@keyframes wordHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
 
-@keyframes skew {
+@keyframes skewLeft {
     0% {
         transform: skew(0deg);
     }
-    40% {transform: skew(-10deg);
+    25% {
+        transform: skew(-20deg);
     }
-    60% {
-        transform: skew(10deg);
+    50% {
+        transform: skew(20deg);
     }
-    80% {
+    75% {
         transform: skew(-10deg);
     }
     100% {
         transform: skew(0deg);
+    }
+}
+
+@keyframes skewRight {
+    0% {
+        transform: skew(0deg);
+    }
+    25% {
+        transform: skew(10deg);
+    }
+    50% {
+        transform: skew(-10deg);
+    }
+    75% {
+        transform: skew(5deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale();
+    }
+    40% {transform: scale(-10deg);
+    }
+    60% {
+        transform: scale(10deg);
+    }
+    80% {
+        transform: skale(-10deg);
+    }
+    100% {
+        transform: skale(0deg);
     }
 }
