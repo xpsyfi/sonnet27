@@ -25,9 +25,28 @@ a {
     text-decoration: none;
     color: inherit;
     cursor:pointer;
-    transition: transform 0.5s ease;
+    transition: transform 8s ease;
 }
 
 a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+#wonky {
+    animation-name: wonky;                
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wonky {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px) rotate(5deg);
+    }
+   
 }
