@@ -43,22 +43,13 @@ a:hover {
 
 
 
-
-#toThee {
-   
-}
-
 #toThee span {
     display: inline-block;
     transition: transform 3s ease-in-out;
 }
 
-#toThee:hover span {
-
-}
 
 
-/* Define positions for each word on hover */
 #toThee:hover span:nth-child(1) {  
     animation: disperse1 5s forwards;
 }

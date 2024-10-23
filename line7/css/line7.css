@@ -41,6 +41,22 @@ a:hover {
     animation-fill-mode: forwards;
 }
 
+
+#animation span {
+    display: inline-block;
+    transition: transform 3s ease-in-out;
+}
+
+#animation:hover span:nth-child(1) {  
+    animation: opens 5s forwards,
+    colors 6s forwards;
+}
+
+#animation:hover span:nth-child(2) { 
+    animation: opensXpand 5s forwards, colors 6s forwards;
+}
+
+
 @keyframes wonky {
     0% {
         transform: translateY(0);
@@ -49,4 +65,31 @@ a:hover {
         transform: translateY(10px) rotate(5deg);
     }
    
+}
+
+@keyframes opens {
+    0% {
+        transform:rotate(0deg) translate(0px) scale(100%);
+    }
+    100% {
+        transform: rotate(-45deg) translate(70px, -60px) scale(150%);
+    }
+}
+
+@keyframes opensXpand {
+    0% {
+        transform: rotate(0deg) translate(0px) scale(100%);
+    }
+    100% {
+        transform: rotate(90deg) translate(70px, -60px) scale(300%);
+    }
+}
+
+@keyframes colors {
+    0% {
+        color: antiquewhite; 
+    }
+    100% {
+        color: #8A0303;
+    }
 }
