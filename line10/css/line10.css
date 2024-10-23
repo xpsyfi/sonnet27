@@ -10,6 +10,7 @@ html {
 
 }
 
+
 body {
     font-family: "p22-1722-pro", sans-serif;
     width: 100%;
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 a {
@@ -32,55 +34,44 @@ a:hover {
     transform: scale(1.2);
 }
 
-
 .wonky {
     animation-name: wonky;                
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-iteration-count:infinite;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    position: relative; /* For the shadow effect */
+    position: relative;
 }
 
-.wonky:hover {
-    color: antiquewhite; /* Change text color on hover */
+#shadow {
+    position: relative; 
+    color: antiquewhite; 
+    transition: text-shadow 0.3s ease;
 }
 
-.wonky:hover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(50, 50, 50, 0.5); /* Dark grey background on hover */
-    z-index: -1; /* Place behind the text */
-    animation: shadowMove 2s infinite; /* Animation for shadow effect */
+#shadow:hover {
+    animation: skewShadow 6s forwards; 
 }
 
-@keyframes shadowMove {
-    0% {
-        transform: translate(0, 0) skew(0deg);
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-    25% {
-        transform: translate(5px, 5px) skew(-5deg);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    }
+@keyframes skewShadow {
+
     50% {
-        transform: translate(-5px, 5px) skew(5deg);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    }
-    75% {
-        transform: translate(5px, -5px) skew(-5deg);
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 
+            -80px 20px 0 rgb(46, 46, 46), 
+            80px -20px 0 rgb(46, 46, 46), 
+            0px -60px 0 rgb(46, 46, 46), 
+            0px 60px 0 rgb(46, 46, 46); 
     }
     100% {
-        transform: translate(0, 0) skew(0deg);
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        text-shadow: 
+            0px 0px 0 rgb(0, 0, 0), 
+            0px 0px 0 rgb(0, 0, 0), 
+            0px 0px 0 rgb(0, 0, 0), 
+            0px 0px 0 rgb(0, 0, 0); 
     }
 }
+
 
 @keyframes wonky {
     0% {
