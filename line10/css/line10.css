@@ -32,13 +32,54 @@ a:hover {
     transform: scale(1.2);
 }
 
-#wonky {
+
+.wonky {
     animation-name: wonky;                
     animation-duration: 6s;
     animation-timing-function: ease-in-out;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
     animation-direction: normal;
     animation-fill-mode: forwards;
+    position: relative; /* For the shadow effect */
+}
+
+.wonky:hover {
+    color: antiquewhite; /* Change text color on hover */
+}
+
+.wonky:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5); /* Dark grey background on hover */
+    z-index: -1; /* Place behind the text */
+    animation: shadowMove 2s infinite; /* Animation for shadow effect */
+}
+
+@keyframes shadowMove {
+    0% {
+        transform: translate(0, 0) skew(0deg);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    25% {
+        transform: translate(5px, 5px) skew(-5deg);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        transform: translate(-5px, 5px) skew(5deg);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    75% {
+        transform: translate(5px, -5px) skew(-5deg);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        transform: translate(0, 0) skew(0deg);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
 @keyframes wonky {
