@@ -41,6 +41,50 @@ a:hover {
     animation-fill-mode: forwards;
 }
 
+
+
+
+#toThee {
+   
+}
+
+#toThee span {
+    display: inline-block;
+    transition: transform 3s ease-in-out;
+}
+
+#toThee:hover span {
+
+}
+
+
+/* Define positions for each word on hover */
+#toThee:hover span:nth-child(1) {  
+    animation: disperse1 5s forwards;
+}
+
+#toThee:hover span:nth-child(2) { 
+    animation: disperse2 5s forwards;
+}
+
+#toThee:hover span:nth-child(3) { 
+    animation: disperse3 5s forwards;
+}
+
+#toThee:hover span:nth-child(4) { 
+    animation: disperse4 5s forwards;
+}
+
+#toThee:hover span:nth-child(5) { 
+    animation: disperse5 5s forwards;
+}
+
+#toThee:hover span:nth-child(6) { 
+    animation: colors 5s forwards;
+ }
+
+
+
 @keyframes wonky {
     0% {
         transform: translateY(0);
@@ -49,4 +93,68 @@ a:hover {
         transform: translateY(10px) rotate(5deg);
     }
    
+}
+
+@keyframes colors {
+    0% {
+        color: antiquewhite; 
+    }
+    100% {
+        color: #8A0303;
+    }
+}
+
+
+@keyframes disperse1 {
+    0% {
+        transform:rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg) translate(170px, -260px) rotate(0deg);
+    }
+}
+
+@keyframes disperse2 {
+    0% {
+        transform: rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg) translate(320px, -50px) rotate(0deg);
+    }
+}
+
+@keyframes disperse3 {
+    0% {
+        transform: rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(133deg) translate(-270px, -200px ) rotate(0deg);
+    }
+}
+
+@keyframes disperse4 {
+    0% {
+        transform:rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(400deg) translate(210px, -80px) rotate(0deg);
+    }
+}
+
+@keyframes disperse5 {
+    0% {
+        transform: rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(340deg) translate(-20px, 10px) rotate(0deg);
+    }
+}
+
+@keyframes disperse6 {
+    0% {
+        transform: rotate(0deg) translate(0px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(300deg) translate(150px) rotate(-300deg);
+    }
 }
