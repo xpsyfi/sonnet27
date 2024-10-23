@@ -47,12 +47,14 @@ a:hover {
 }
 
 #expire:hover span {
-    animation: fall 6s forwards, fadeOut 3s forwards;
+    animation: fall 6s forwards, 
+    fadeOut 3s forwards;
 }
 
 #expire span {
     display: inline-block;
-    transition: transform 3s ease, opacity 3s ease;
+    transition: transform 3s ease,
+     opacity 3s ease;
 }
 
 #expire span:nth-child(1) {

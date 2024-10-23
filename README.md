@@ -11,3 +11,7 @@ This is an animated website that brings Shakespeare’s Sonnet 27 to life by usi
 The website will feature a separate page for each line of Sonnet 27, with animations triggered automatically upon loading. On each page, hovering over individual words will replay their initial animations, allowing users to interact with the text dynamically. Additionally, clicking the last word of each line will navigate to the next page, where the subsequent line of the poem will be presented and animated. This setup combines interaction and progression, offering a unique way for users to explore the poem line by line.
 
 ### Acknowledgment
+
+https://giangboithi.github.io/ProjectTwo/sentence2/sentence3/sentence4/sentence5/sentence6/sentence7/sentence8/index.html
+
+https://www.youtube.com/watch?v=4GMfzE1jNVM

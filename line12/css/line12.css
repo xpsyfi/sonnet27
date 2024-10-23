@@ -5,9 +5,9 @@
 }
 
 html {
-    color: antiquewhite;
+    color: rgb(69, 69, 69);
     background-color: rgb(15, 15, 15);
-
+    transition: background-color 0.5s ease;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeToWhite 4s forwards;
 }
 
 a {
@@ -26,6 +27,7 @@ a {
     color: inherit;
     cursor:pointer;
     transition: transform 8s ease;
+    transition: transform 8s ease, background-color 06s ease, color 6s ease;
 }
 
 a:hover {
@@ -39,6 +41,15 @@ a:hover {
     animation-iteration-count:infinite;
     animation-direction: normal;
     animation-fill-mode: forwards;
+    transition: color 6s ease;
+}
+
+#wonky:hover {
+    color: black;
+}
+
+body:hover {
+    background-color: white;
 }
 
 @keyframes wonky {
@@ -49,4 +60,13 @@ a:hover {
         transform: translateY(10px) rotate(5deg);
     }
    
+}
+
+@keyframes fadeToWhite {
+    0% {
+        background-color: rgb(15, 15, 15);
+    }
+    100% {
+        background-color: white;
+    }
 }
