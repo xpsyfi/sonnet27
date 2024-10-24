@@ -51,48 +51,45 @@ a:hover {
     transition: transform 3s ease-in-out;
 }
 
-#moves:hover span {
-    animation: disperse 3s ease forwards;
-}
 
 #moves:hover span:nth-child(1) {
-    animation: disperse1 5s forwards;
+    animation: disperse1 8s forwards;
 }
 
 #moves:hover span:nth-child(2) {
-    animation: disperse2 5s forwards;
+    animation: disperse2 8s forwards;
 }
 
 #moves:hover span:nth-child(3) {
-    animation: disperse3 5s forwards;
+    animation: disperse3 8s forwards;
 }
 
 #moves:hover span:nth-child(4) {
-    animation: disperse4 5s forwards;
+    animation: disperse4 8s forwards;
 }
 
 #moves:hover span:nth-child(5) {
-    animation: disperse5 5s forwards;
+    animation: disperse5 8s forwards;
 }
 
 #moves:hover span:nth-child(6) {
-    animation: disperse6 5s forwards;
+    animation: disperse6 8s forwards;
 }
 
 #moves:hover span:nth-child(7) {
-    animation: disperse7 5s forwards;
+    animation: disperse7 8s forwards;
 }
 
 #moves:hover span:nth-child(8) {
-    animation: disperse8 05s forwards;
+    animation: disperse8 8s forwards;
 }
 
 #moves:hover span:nth-child(9) {
-    animation: disperse9 5s forwards;
+    animation: disperse9 8s forwards;
 }
 
 #moves:hover span:nth-child(10) {
-    animation: disperse10 5s forwards;
+    animation: disperse10 8s forwards;
 }
 
 @keyframes wonky {
